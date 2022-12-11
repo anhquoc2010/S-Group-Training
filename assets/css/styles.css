@@ -415,18 +415,6 @@ footer {
     margin-bottom: 40px;
 }
 
-.footer__contact_us--talk a {
-    display: inline-block;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    color: #F26464;
-    padding: 17px 30px;
-    border: 2px solid #F26464;
-    border-radius: 60px;
-}
-
 .copyright {
     color: rgba(255, 255, 255, 0.5);
     letter-spacing: 1px;
