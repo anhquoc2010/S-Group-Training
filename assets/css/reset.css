@@ -808,6 +808,7 @@ ul li {
     padding: 20px 10px 15px
   }
 }
+
 .logo {
   display: block;
   -ms-flex-negative: 0;
@@ -5420,6 +5421,7 @@ ul li {
 .section.section_integrate-with-graphic_integromat .wrapper__inner .section-v2__text {
   opacity: .5
 }
+
 .section.section_flexible {
   background: linear-gradient(270deg, #9f8fff, #7b68ee);
   height: 390px;
@@ -7753,6 +7755,7 @@ ul li {
 .section.section_brand-all-assets .wrapper__inner_bottom p a:hover {
   color: #533ae9
 }
+
 .section.section_company-partners {
   position: relative;
   padding: 150px 0;
