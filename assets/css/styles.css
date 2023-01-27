@@ -10373,6 +10373,21 @@
   max-width: 1380px
 }
 
+.div-main-section-reviews__carousel .slick-arrow {
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  border: 1.68px solid #292d34;
+  background: 0 0;
+  cursor: pointer;
+  font-size: 0;
+}
+
+.div-main-section-reviews__carousel .slick-arrow.slick-disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
 .div-main-section-reviews__carousel .div-main-section-reviews__carousel-slider-btn-wrap {
   position: absolute;
   right: 0;
@@ -21495,6 +21510,11 @@ video[width][height] {
   to {
     stroke-dashoffset: 0
   }
+}
+
+.section_header-white .is-sticky .header {
+  background: #fff;
+  border-bottom: 1px solid #e4e4e4;
 }
 
 .section_header-white_main-landing .section_join-companies {
