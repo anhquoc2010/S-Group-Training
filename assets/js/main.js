@@ -23,7 +23,7 @@
         h = n.hasOwnProperty,
         r = h.toString,
         c = r.call(Object),
-      g = {};
+        g = {};
 
     function v(e, t) {
         var n = (t = t || C).createElement("script");
@@ -10138,6 +10138,7 @@ function redirect(e, t) {
         e &&
         (setClickUpCookie("clickup-email", e, 1),
             (n += planType ? (n ? "&" : "?") + "plan=" + planType : "")),
+        (window.location.href = "https://app.clickup.com/signup" + n),
         ("/customers/stx-next-jakub.html" !== window.location.pathname &&
             "/customers/stx-next-jakub" !== window.location.pathname) ||
         (window.location.href =
@@ -11328,17 +11329,17 @@ $(function() {
                                         $("[data-form] input").val(""),
                                         $("[data-submit" + r + "]").removeClass("btn-loading")),
                                     "jakub-download" == a ?
-                                    ($("#jakub-download__message_v1").show(),
-                                        $(".jakub-download__form_green").hide()) :
+                                    ($("#cu-jakub-download__message_v1").show(),
+                                        $(".cu-jakub-download__form_green").hide()) :
                                     "jakub-download_v2" == a &&
-                                    ($("#jakub-download__message_v2").show(),
-                                        $(".jakub-download__form_purple").hide()),
+                                    ($("#cu-jakub-download__message_v2").show(),
+                                        $(".cu-jakub-download__form_purple").hide()),
                                     "hypervsn-download" == a ?
-                                    ($("#hypervsn-download__message_v1").show(),
-                                        $(".hypervsn-download__form_green").hide()) :
+                                    ($("#cu-hypervsn-download__message_v1").show(),
+                                        $(".cu-hypervsn-download__form_green").hide()) :
                                     "hypervsn-download_v2" == a &&
-                                    ($("#hypervsn-download__message_v2").show(),
-                                        $(".hypervsn-download__form_purple").hide())),
+                                    ($("#cu-hypervsn-download__message_v2").show(),
+                                        $(".cu-hypervsn-download__form_purple").hide())),
                                 "enterprise" !== a)
                         ) {
                             var t = {
@@ -13449,7 +13450,7 @@ function GartnerForm() {
                         }, 4e3),
                         $(".gartner__form").hide(),
                         $(
-                            ".section.section_gartner .main-section-header__wrapper-inner"
+                            ".section.section_gartner .cu-main-section-header__wrapper-inner"
                         ).css("align-items", "center"),
                         $("[data-modal-error-input-gartner-name]").hide(),
                         $("[data-modal-error-input-gartner-surname]").hide(),
@@ -13551,7 +13552,7 @@ function ProductManagementGuideForm() {
                         }, 4e3),
                         $(".product-management-guide__form").hide(),
                         $(
-                            ".section.section_product-management-guide .main-section-header__wrapper-inner"
+                            ".section.section_product-management-guide .cu-main-section-header__wrapper-inner"
                         ).css("align-items", "center"),
                         $("[data-modal-error-input-product-management-guide-name]").hide(),
                         $(
@@ -13636,7 +13637,7 @@ function VidaHealthForm() {
                         }, 4e3),
                         $(".vida-health__form").hide(),
                         $(
-                            ".section.section_vida-health .main-section-header__wrapper-inner"
+                            ".section.section_vida-health .cu-main-section-header__wrapper-inner"
                         ).css("align-items", "center"),
                         $("[data-modal-error-input-vida-health-name]").hide(),
                         $("[data-modal-error-input-vida-health-surname]").hide(),
@@ -13725,7 +13726,7 @@ function StanleySecurityForm() {
                         }, 4e3),
                         $(".stanley-security__form").hide(),
                         $(
-                            ".section.section_stanley-security .main-section-header__wrapper-inner"
+                            ".section.section_stanley-security .cu-main-section-header__wrapper-inner"
                         ).css("align-items", "center"),
                         $("[data-modal-error-input-stanley-security-name]").hide(),
                         $("[data-modal-error-input-stanley-security-surname]").hide(),
@@ -13806,7 +13807,7 @@ function PadresForm() {
                         }, 4e3),
                         $(".padres__form").hide(),
                         $(
-                            ".section.section_padres .main-section-header__wrapper-inner"
+                            ".section.section_padres .cu-main-section-header__wrapper-inner"
                         ).css("align-items", "center"),
                         $("[data-modal-error-input-padres-name]").hide(),
                         $("[data-modal-error-input-padres-surname]").hide(),
@@ -13887,7 +13888,7 @@ function WakeForestForm() {
                         }, 4e3),
                         $(".wakeforest__form").hide(),
                         $(
-                            ".section.section_wakeforest .main-section-header__wrapper-inner"
+                            ".section.section_wakeforest .cu-main-section-header__wrapper-inner"
                         ).css("align-items", "center"),
                         $("[data-modal-error-input-wakeforest-name]").hide(),
                         $("[data-modal-error-input-wakeforest-surname]").hide(),
@@ -13968,7 +13969,7 @@ function LuluPressForm() {
                         }, 4e3),
                         $(".lulupress__form").hide(),
                         $(
-                            ".section.section_lulupress .main-section-header__wrapper-inner"
+                            ".section.section_lulupress .cu-main-section-header__wrapper-inner"
                         ).css("align-items", "center"),
                         $("[data-modal-error-input-lulupress-name]").hide(),
                         $("[data-modal-error-input-lulupress-surname]").hide(),
@@ -15811,7 +15812,7 @@ function metaImagesSetup(e) {
         $('meta[itemprop="image"]').length ||
         ((t = null),
             (n = ""),
-            (a = "https://clickup.com/landingassets/images/logo_on-purple_vert.png"),
+            (a = "https://clickup.com/landing/images/logo_on-purple_vert.png"),
             $.ajax({
                 url: "../static/meta-images.json",
                 dataType: "json",
@@ -15822,8 +15823,8 @@ function metaImagesSetup(e) {
             }),
             (n =
                 t && t.hasOwnProperty(e) ?
-                "https://clickup.com/landingassets/images/" + t[e] :
-                "https://clickup.com/landingassets/images/meta/" + e + ".png"),
+                "https://clickup.com/landing/images/" + t[e] :
+                "https://clickup.com/landing/images/meta/" + e + ".png"),
             $("head").append('<meta itemprop="image" content="' + a + '" />'),
             $("head").append('<meta property="og:image" content="' + a + '" />'),
             $("head").append('<meta name="twitter:image" content="' + a + '" />'),
@@ -16439,7 +16440,7 @@ function updateLatestBlogPosts() {
         try {
             var t =
                 "clickup.com" === window.location.host ?
-                "/blog/wp-content/uploads/recent-posts.json" :
+                "/blog/wp-content/uploads/cu-recent-posts.json" :
                 "";
             if (!t) return;
             fetch(t)
@@ -16480,64 +16481,6 @@ function updateLatestBlogPosts() {
 }
 initV4Nav(),
     updateLatestBlogPosts(),
-    $(document).ready(function() {
-        MktoForms2.whenReady(function(e) {
-            var t = e.getId();
-
-            function n() {
-                var e = $("#Lblmarketable", "#mktoForm_" + t);
-                e &&
-                    e.closest(".mktoFieldWrap").addClass("mktoFieldWrap--has-checkbox");
-            }
-            $("label.mktoLabel", "#mktoForm_" + t).each(function() {
-                    0 <
-                        $(this)
-                        .parent(".mktoFieldWrap")
-                        .find("input[type=email], input[type=text], input[type=date]").length ?
-                        $(this).addClass("textbox") :
-                        0 < $(this).parent(".mktoFieldWrap").find("select").length ?
-                        $(this).addClass("dropdown") :
-                        0 <
-                        $(this).parent(".mktoFieldWrap").find("input[type=radio]").length ?
-                        $(this).addClass("radiobutton") :
-                        0 <
-                        $(this).parent(".mktoFieldWrap").find("input[type=checkbox]").length ?
-                        $(this).addClass("checkbox") :
-                        0 < $(this).parent(".mktoFieldWrap").find("textarea").length ?
-                        ($(this).addClass("textarea"),
-                            $(this).parent(".mktoFieldWrap").addClass("textareaFieldWrap")) :
-                        0 <
-                        $(this).parent(".mktoFieldWrap").find("input[type=range]")
-                        .length && $(this).addClass("rangefield");
-                }),
-                $("div.mktoHtmlText", "#mktoForm_" + t).each(function() {
-                    $(this).parent(".mktoFieldWrap").addClass("privacytext");
-                }),
-                $('input[type="hidden"]', "#mktoForm_" + t).each(function() {
-                    $(this).parent(".mktoFormRow").addClass("hidden_input");
-                }),
-                $(".mktoPlaceholder", "#mktoForm_" + t).each(function() {
-                    $(this).parent(".mktoFormRow").addClass("hidden_input");
-                }),
-                n();
-            var a = $("div.mktoHtmlText", "#mktoForm_" + t).last(),
-                i = $("button.mktoButton", "#mktoForm_" + t);
-            if (a && i) {
-                var o = i.parent().parent();
-                a.closest(".mktoFormRow").remove(),
-                    o.addClass("mktoButtonRow--w-disclaimer"),
-                    o.append(a);
-            }
-            var r = $(
-                'select option[value="United States"]',
-                "#mktoForm_" + t
-            ).parent();
-            r &&
-                r.on("change", function() {
-                    n();
-                });
-        });
-    }),
     $('[data-modal="enterprise"]').on("click", function() {
         segmentEventTrack("click contact sales", {
             button: "contact sales"
