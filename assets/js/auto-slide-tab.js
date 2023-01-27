@@ -128,3 +128,14 @@ function showNextSlide4() {
   $(".div-main-section-platforms").isInViewport() &&
     $(window).off("scroll.three"),
   $(".div-main-section-teams").isInViewport() && $(window).off("scroll.four");
+
+var mutinyVideo = document.getElementById("mutiny-video");
+
+const playPromise = mutinyVideo.play() || Promise.reject(""); // Not all browsers return promise from .play().
+playPromise
+  .then(() => {})
+  .catch((err) => {
+    // Video couldn't be autoplayed because of autoplay policy. Mute it and play.
+    mutinyVideo.muted = true;
+    mutinyVideo.play();
+  });
